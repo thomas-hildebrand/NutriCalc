@@ -2,7 +2,7 @@
 #include <string>
 #include "Log.h"
 
-void FoodMenu()
+void FoodMenuScreen()
 {
 	const std::string MAIN_MENU_OPTION = "0";
 	const std::string VIEW_FOOD_OPTION = "1";

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <Windows.h>
+#include "Log.h"
 
 void TextColor(int color)
 {
@@ -20,6 +21,7 @@ void DisplayMainMenu()
 	std::cout << "                 * Main Menu *" << std::endl;
 	std::cout << "                 *************" << std::endl;
 	std::cout << "1. Open Food Menu" << std::endl;
+	std::cout << "2. Open Meal Menu (TODO)" << std::endl;
 	std::cout << "0. Exit Program" << std::endl;
 }
 
@@ -27,15 +29,15 @@ void DisplayFoodMenu()
 {
 	std::cout << "                 * Food Menu *" << std::endl;
 	std::cout << "                 *************" << std::endl;
-	std::cout << "1. View Food(TODO)" << std::endl;
-	std::cout << "2. View All Foods(TODO)" << std::endl;
-	std::cout << "3. Create Food(TODO)" << std::endl;
-	std::cout << "0. Return to Main Menu(TODO)" << std::endl;
+	std::cout << "1. View Food (TODO)" << std::endl;
+	std::cout << "2. View All Foods (TODO)" << std::endl;
+	std::cout << "3. Create Food (TODO)" << std::endl;
+	std::cout << "0. Return to Main Menu (TODO)" << std::endl;
 }
 
 void DisplayInvalidInputErrorMsg(std::string input)
 {
-	TextColor(4);
+	TextColor(TEXT_COLOR_RED);
 	std::cout << "INVALID INPUT!!!: " << input << std::endl;
-	TextColor(7);
+	TextColor(TEXT_COLOR_WHITE);
 }
