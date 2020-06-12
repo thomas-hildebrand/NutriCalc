@@ -2,6 +2,7 @@
 #include <string>
 #include "Log.h"
 #include "Screen.h"
+#include "Food.h"
 
 int main()
 {
