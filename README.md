@@ -1,12 +1,16 @@
 NutriCalc
+
 This is a personal project that will showcase my skills developed while at UCSD as well as give me the oppurtunity to showcase my ability to learn beyond what the UCSD cirrculum has taught me.
 This project will track the user's various daily nutritional needs.
 
 The following will be tracked:
+
 Calories
-Macro Nutrients
+
+Macro Nutrients:
 Fat Carbohydrates Protein
-Micro Nutrients
+
+Micro Nutrients:
 Fiber Omega-3 Omega-6 Tryptophan Cystine Vitamin A Alpha Carotene Beta Carotene Beta Cryptoxanthin Lycopene Lutein + Zeaxanthin Vitamin C Vitamin D Vitamin E Thiamin Riboflavin Nicacin Vitamin B6 Folate Vitamin B12 Pantothenic Acid Choline Calcium Iron Magnesium Potassium Sodium Zinc Copper Manganese Selenium Biotin Chromium Iodine
 
 Planned Functionality
