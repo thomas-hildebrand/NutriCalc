@@ -10,7 +10,7 @@ void TextColor(int color)
 void DisplayHeader()
 {
 	std::cout << "******************************************************" << std::endl;
-	std::cout << "                   NutriCalc" << std::endl;
+	std::cout << "                    NutriCalc" << std::endl;
 	std::cout << "******************************************************" << std::endl;
 
 }
