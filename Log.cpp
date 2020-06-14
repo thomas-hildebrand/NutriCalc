@@ -10,16 +10,15 @@ void TextColor(int color)
 
 void DisplayHeader()
 {
-	std::cout << "******************************************************" << std::endl;
-	std::cout << "                    NutriCalc" << std::endl;
-	std::cout << "******************************************************" << std::endl;
-
+	std::cout << "***************************************************************************************************" << std::endl;
+	std::cout << "*                                           NutriCalc                                             *" << std::endl;
+	std::cout << "***************************************************************************************************" << std::endl;
 }
 
 void DisplayMainMenu()
 {
-	std::cout << "                 * Main Menu *" << std::endl;
-	std::cout << "                 *************" << std::endl;
+	std::cout << "                                          * Main Menu *" << std::endl;
+	std::cout << "                                          *************" << std::endl;
 	std::cout << "1. Open Food Menu" << std::endl;
 	std::cout << "2. Open Meal Menu (TODO)" << std::endl;
 	std::cout << "0. Exit Program" << std::endl;
@@ -27,8 +26,8 @@ void DisplayMainMenu()
 
 void DisplayFoodMenu()
 {
-	std::cout << "                 * Food Menu *" << std::endl;
-	std::cout << "                 *************" << std::endl;
+	std::cout << "                                          * Food Menu *" << std::endl;
+	std::cout << "                                          *************" << std::endl;
 	std::cout << "1. View Food (TODO)" << std::endl;
 	std::cout << "2. View All Foods (TODO)" << std::endl;
 	std::cout << "3. Create Food (TODO)" << std::endl;
