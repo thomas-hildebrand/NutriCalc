@@ -31,8 +31,17 @@ void DisplayFoodMenu()
 	std::cout << "                 *************" << std::endl;
 	std::cout << "1. View Food (TODO)" << std::endl;
 	std::cout << "2. View All Foods (TODO)" << std::endl;
-	std::cout << "3. Create Food (TODO)" << std::endl;
+	std::cout << "3. Create New Food" << std::endl;
 	std::cout << "0. Return to Main Menu (TODO)" << std::endl;
+}
+
+void DisplayFoodCreation()
+{
+	std::cout << "               * Create New Food *" << std::endl;
+	std::cout << "               *******************" << std::endl;
+	TextColor(TEXT_COLOR_CYAN);
+	std::cout << "Type 'quit' at any time to exit food creation." << std::endl;
+	TextColor(TEXT_COLOR_WHITE);
 }
 
 void DisplayInvalidInputErrorMsg(std::string input)

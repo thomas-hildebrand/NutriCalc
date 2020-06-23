@@ -9,8 +9,12 @@ private:
 	std::vector<float> nutrients;
 
 public:
-	Food(std::string foodName) {
-		name = foodName;
-		std::cout << name << " has been created. " << std::endl;
+	Food() {
+		std::string response = "";
+
+		std::cout << "Food Name: ";
+		std::getline(std::cin, response);
+		
+		std::cout << 
 	}
 };

@@ -2,6 +2,7 @@
 #include <string>
 #include "Log.h"
 #include "Food.h"
+#include "Screen.h"
 
 void FoodMenuScreen()
 {
@@ -39,8 +40,7 @@ void FoodMenuScreen()
 		}
 		else if (response == CREATE_FOOD_OPTION)
 		{
-			std::cout << "CREATE_FOOD_OPTION selected" << std::endl;
-			Food apple("Apple");
+			FoodCreationScreen();
 		}
 		else if (response == MAIN_MENU_OPTION)
 		{
@@ -53,4 +53,12 @@ void FoodMenuScreen()
 
 		system("PAUSE");
 	}
+}
+
+void FoodCreationScreen() 
+{
+	system("CLS");
+	DisplayHeader();
+	DisplayFoodCreation();
+	Food();
 }
