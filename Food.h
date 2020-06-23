@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <string>
+#include "Log.h"
 
 class Food
 {
@@ -45,11 +47,51 @@ private:
 	const int BIOTIN_INDEX = 36;
 	const int CHROMIUM_INDEX = 37;
 	const int IODINE_INDEX = 38;
+	const int NUMBER_OF_NUTRIENTS = 39;
 
 	std::string name;
-	std::vector<float> nutrients;
-
-
+	std::vector<std::pair <std::string, float>> nutrients = {
+		std::make_pair("Calories", 0.0),
+		std::make_pair("Carbohydrates", 0.0),
+		std::make_pair("Fat", 0.0),
+		std::make_pair("Protein", 0.0),
+		std::make_pair("Fiber", 0.0),
+		std::make_pair("Omega – 3", 0.0),
+		std::make_pair("Omega – 6", 0.0),
+		std::make_pair("Tryptophan", 0.0),
+		std::make_pair("Cystine", 0.0),
+		std::make_pair("Vitamin A", 0.0),
+		std::make_pair("Alpha Carotene", 0.0),
+		std::make_pair("Beta Carotene", 0.0),
+		std::make_pair("Beta Cryptoxanthin", 0.0),
+		std::make_pair("Lycopene", 0.0),
+		std::make_pair("Lutein + Zeaxanthin", 0.0),
+		std::make_pair("Vitamin C", 0.0),
+		std::make_pair("Vitamin D", 0.0),
+		std::make_pair("Vitamin E", 0.0),
+		std::make_pair("Thiamin", 0.0),
+		std::make_pair("Riboflavin", 0.0),
+		std::make_pair("Niacin", 0.0),
+		std::make_pair("Vitamin B6", 0.0),
+		std::make_pair("Folate", 0.0),
+		std::make_pair("Vitamin B12", 0.0),
+		std::make_pair("Pantothenic Acid", 0.0),
+		std::make_pair("Choline", 0.0),
+		std::make_pair("Calcium", 0.0),
+		std::make_pair("Iron", 0.0),
+		std::make_pair("Magnesium", 0.0),
+		std::make_pair("Potassium", 0.0),
+		std::make_pair("Sodium", 0.0),
+		std::make_pair("Zinc", 0.0),
+		std::make_pair("Copper", 0.0),
+		std::make_pair("Manganese", 0.0),
+		std::make_pair("Selenium", 0.0),
+		std::make_pair("Biotin", 0.0),
+		std::make_pair("Chromium", 0.0),
+		std::make_pair("Iodine", 0.0)
+	};
+	bool isFloat(std::string input);
+	float verifyFloat(std::string input);
 
 public:
 	Food() {
@@ -57,8 +99,30 @@ public:
 
 		std::cout << "Food Name: ";
 		std::getline(std::cin, response);
+		name = response;
 		
-		std::cout << 
+		system("CLS");
+		DisplayHeader();
+		DisplayFoodCreation(name);
+
+		std::cout << "Measurement in Grams: ";
+		std::getline(std::cin, response);
+		float grams = verifyFloat(response);
+		while (grams == 0)
+		{
+			std::cout << "Measurement cannot be zero.  Please re-enter measurement in Grams: ";
+			std::getline(std::cin, response);
+			grams = verifyFloat(response);
+		}
+		
+		for (int i = 0; i < nutrients.size(); i++)
+		{
+			std::cout << nutrients[i].first << ": ";
+			std::getline(std::cin, response);
+			nutrients[i].second = verifyFloat(response);
+		}
+
+		std::cout << name << " has been sucessfully created!" << std::endl;
 	}
 
 	

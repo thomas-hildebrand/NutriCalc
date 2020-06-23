@@ -10,9 +10,36 @@ void TextColor(int color)
 
 void DisplayHeader()
 {
-	std::cout << "***************************************************************************************************" << std::endl;
-	std::cout << "*                                           NutriCalc                                             *" << std::endl;
-	std::cout << "***************************************************************************************************" << std::endl;
+	std::string header = "NutriCalc";
+	int numSpaces = HEADER_WIDTH - header.length() - 2;
+
+	for (int i = 0; i < HEADER_WIDTH; i++)
+	{
+		std::cout << "*";
+	}
+	std::cout << "\n*";
+
+	for (int i = 0; i < numSpaces / 2; i++)
+	{
+		std::cout << " ";
+	}
+
+	numSpaces = numSpaces % 2 == 0 ? numSpaces /= 2 : numSpaces = numSpaces / 2 + 1;
+
+	std::cout << header;
+
+	for (int i = 0; i < numSpaces; i++)
+	{
+		std::cout << " ";
+	}
+
+	std::cout << "*" << std::endl;
+	
+	for (int i = 0; i < HEADER_WIDTH; i++)
+	{
+		std::cout << "*";
+	}
+	std::cout << std::endl;
 }
 
 void DisplayMainMenu()
@@ -36,8 +63,17 @@ void DisplayFoodMenu()
 
 void DisplayFoodCreation()
 {
-	std::cout << "               * Create New Food *" << std::endl;
-	std::cout << "               *******************" << std::endl;
+	std::cout << "                                       * Create New Food *" << std::endl;
+	std::cout << "                                       *******************" << std::endl;
+	TextColor(TEXT_COLOR_CYAN);
+	std::cout << "Type 'quit' at any time to exit food creation." << std::endl;
+	TextColor(TEXT_COLOR_WHITE);
+}
+
+void DisplayFoodCreation(std::string foodName)
+{
+	std::cout << "                                       * " << foodName << " *" << std::endl;
+	std::cout << "                                       *******************" << std::endl;
 	TextColor(TEXT_COLOR_CYAN);
 	std::cout << "Type 'quit' at any time to exit food creation." << std::endl;
 	TextColor(TEXT_COLOR_WHITE);
